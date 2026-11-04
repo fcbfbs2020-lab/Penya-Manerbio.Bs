@@ -1,1 +1,203 @@
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penya Barcelonista Manerbio BS</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        
+        /* Full Page Background Image with Dark Overlay */
+        body { 
+            background: linear-gradient(rgba(11, 19, 41, 0.85), rgba(11, 19, 41, 0.92)), url('https://i.postimg.cc/7Z0mMBDG/1000441962.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            color: #ffffff; 
+            line-height: 1.5; 
+        }
+        
+        header { background: rgba(15, 23, 42, 0.95); padding: 15px 20px; border-bottom: 1px solid rgba(237, 187, 0, 0.3); text-align: center; position: sticky; top: 0; z-index: 50; }
+        .logo-text { color: #edbb00; font-weight: 900; font-size: 1.1rem; letter-spacing: 1px; display: block; margin-bottom: 8px; }
+        .nav-links { display: flex; justify-content: center; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.8rem; }
+        
+        .social-btns { display: flex; justify-content: center; gap: 8px; }
+        .btn-social { padding: 5px 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.75rem; color: #fff; }
+        .btn-wa { background-color: #16a34a; }
+        .btn-ig { background-color: #c13584; }
+        .btn-x { background-color: #000000; border: 1px solid #334155; }
+        
+        .hero { padding: 50px 20px; text-align: center; }
+        .tag { background: #edbb00; color: #000; font-weight: 800; font-size: 0.65rem; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; display: inline-block; margin-bottom: 12px; }
+        .hero h1 { font-size: 2.2rem; font-weight: 900; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .hero p { color: #e2e8f0; font-size: 0.95rem; margin-bottom: 20px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+        
+        .ticket-banner { background: rgba(237, 187, 0, 0.15); border-top: 1px solid rgba(237, 187, 0, 0.4); border-bottom: 1px solid rgba(237, 187, 0, 0.4); padding: 15px; text-align: center; }
+        .ticket-banner h3 { color: #edbb00; font-size: 0.95rem; font-weight: bold; margin-bottom: 4px; }
+        .ticket-banner p { color: #cbd5e1; font-size: 0.85rem; }
+        
+        .section { padding: 35px 20px; }
+        .section-title { text-align: center; font-size: 1.6rem; font-weight: 800; margin-bottom: 25px; color: #edbb00; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        
+        .card { background: rgba(30, 41, 59, 0.9); border-radius: 16px; padding: 25px; margin-bottom: 20px; border: 1px solid #334155; position: relative; backdrop-filter: blur(5px); }
+        .card-premium { border: 2px solid #dc2626; }
+        .badge { position: absolute; top: 0; right: 0; background: #dc2626; color: white; font-size: 0.65rem; font-weight: bold; padding: 4px 10px; border-bottom-left-radius: 10px; text-transform: uppercase; }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .card-title { color: #edbb00; font-size: 1.2rem; font-weight: bold; }
+        .price { font-size: 1.8rem; font-weight: 800; }
+        .price span { font-size: 0.8rem; font-weight: normal; color: #94a3b8; }
+        
+        .features { list-style: none; margin-bottom: 20px; }
+        .features li { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .features li::before { content: "✓"; position: absolute; left: 0; color: #22c55e; font-weight: bold; }
+        
+        .btn-action { display: block; width: 100%; padding: 12px; text-align: center; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 0.9rem; color: white; }
+        .btn-blue { background: #2563eb; }
+        .btn-red { background: #dc2626; }
+
+        /* Official Registration Notice Box */
+        .official-box { 
+            background: rgba(15, 23, 42, 0.95); 
+            border: 1px solid #edbb00; 
+            border-radius: 12px; 
+            padding: 20px; 
+            text-align: center; 
+            margin-top: 25px; 
+        }
+        .official-box h4 { color: #edbb00; font-size: 1rem; margin-bottom: 8px; font-weight: bold; }
+        .official-box p { color: #cbd5e1; font-size: 0.85rem; margin-bottom: 15px; }
+        .btn-official { 
+            display: inline-block; 
+            background: #004D98; 
+            color: #edbb00; 
+            padding: 10px 18px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 0.85rem; 
+            border: 1px solid #edbb00; 
+        }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 15px; max-width: 400px; margin: 0 auto; }
+        .gallery-card { background: rgba(30, 41, 59, 0.9); border-radius: 12px; border: 1px solid #334155; overflow: hidden; text-align: center; backdrop-filter: blur(5px); }
+        .gallery-card img { width: 100%; height: auto; display: block; object-fit: cover; }
+        .gallery-caption { padding: 10px; font-size: 0.85rem; color: #cbd5e1; font-weight: bold; }
+
+        .contact-box { background: rgba(30, 41, 59, 0.9); border-radius: 12px; padding: 15px; text-align: center; margin-bottom: 12px; border: 1px solid #334155; backdrop-filter: blur(5px); }
+        .contact-box a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; display: block; margin-top: 5px; word-break: break-all; }
+        
+        footer { background: rgba(15, 23, 42, 0.95); padding: 20px; text-align: center; color: #64748b; font-size: 0.75rem; border-top: 1px solid #1e293b; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="logo-text">PENYA BARCELONISTA MANERBIO BS</span>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#tesseramento">Tesseramento</a>
+            <a href="#galleria">Galleria</a>
+            <a href="#contact">Contatti</a>
+        </div>
+        <div class="social-btns">
+            <a href="https://wa.me/393291186847" target="_blank" class="btn-social btn-wa">WhatsApp</a>
+            <a href="https://instagram.com/penya_manerbio_bs" target="_blank" class="btn-social btn-ig">Instagram</a>
+            <a href="https://x.com/search?q=penya%20fcb%20manerbio%20bs" target="_blank" class="btn-social btn-x">X / Twitter</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <span class="tag">Sede Ufficiale Manerbio (BS)</span>
+        <h1>Més Que Una Penya</h1>
+        <p>Il punto di riferimento per tutti i tifosi del FC Barcelona a Manerbio e Brescia.</p>
+    </section>
+
+    <!-- Ticket Benefit Notice -->
+    <div class="ticket-banner">
+        <h3>🎫 Vantaggi Biglietti per Tutti i Soci</h3>
+        <p>Prenotazione biglietti per il <strong>Camp Nou</strong> e richiesta biglietti per le <strong>trasferte fuori casa a meno di 60€</strong>!</p>
+    </div>
+
+    <!-- Tesseramento Section -->
+    <section id="tesseramento" class="section">
+        <h2 class="section-title">Tesseramento Stagionale</h2>
+
+        <!-- Socio Base (€20) -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Socio Base</div>
+                <div class="price">€20 <span>/ anno</span></div>
+            </div>
+            <ul class="features">
+                <li>Tessera ufficiale Penya Barcelonista Manerbio</li>
+                <li><strong>Prenotazione biglietti Camp Nou</strong></li>
+                <li><strong>Biglietti trasferte fuori casa a meno di 60€</strong></li>
+                <li>Accesso alle attività ed eventi del club</li>
+            </ul>
+            <a href="https://wa.me/393291186847?text=Vorrei%20informazioni%20per%20il%20tesseramento%20Socio%20Base%20(20€)" target="_blank" class="btn-action btn-blue">Richiedi Adesione (€20)</a>
+        </div>
+
+        <!-- Socio Premium + Sciarpa (€27) -->
+        <div class="card card-premium">
+            <span class="badge">Consigliato</span>
+            <div class="card-header">
+                <div class="card-title">Socio Premium</div>
+                <div class="price">€27 <span>/ anno</span></div>
+            </div>
+            <ul class="features">
+                <li>Tutti i vantaggi della Tessera Base</li>
+                <li><strong>Sciarpa Ufficiale della Penya inclusa</strong></li>
+                <li><strong>Prenotazione biglietti Camp Nou</strong></li>
+                <li><strong>Biglietti trasferte fuori casa a meno di 60€</strong></li>
+            </ul>
+            <a href="https://wa.me/393291186847?text=Vorrei%20informazioni%20per%20il%20tesseramento%20Socio%20Premium%20con%20Sciarpa%20(27€)" target="_blank" class="btn-action btn-red">Richiedi con Sciarpa (€27)</a>
+        </div>
+
+        <!-- Official FC Barcelona Penyes Notice -->
+        <div class="official-box">
+            <h4>ℹ️ Registrazione Ufficiale FC Barcelona</h4>
+            <p>La registrazione definitiva e la convalida di ogni socio avvengono tramite il portale ufficiale del FC Barcelona dedicato ai Penyistes.</p>
+            <a href="https://myaccount.fcbarcelona.com/penyistes/en-US" target="_blank" class="btn-official">🌐 Portale Ufficiale FC Barcelona Penyistes</a>
+        </div>
+    </section>
+
+    <!-- Galleria Section -->
+    <section id="galleria" class="section">
+        <h2 class="section-title">Galleria & Sede</h2>
+        <p style="text-align: center; color: #cbd5e1; font-size: 0.85rem; margin-bottom: 20px;">I momenti più belli della nostra Penya e della sede a Manerbio.</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://i.postimg.cc/zG2NJz2s/1000434214.jpg" alt="Penya Barcelonista Manerbio BS">
+                <div class="gallery-caption">Sede Ufficiale & Attività Penya Manerbio</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contatti Ufficiali</h2>
+        
+        <div class="contact-box">
+            <strong style="color:#edbb00;">Email Penya:</strong>
+            <a href="mailto:penya-manerbio.bs@hotmail.com">penya-manerbio.bs@hotmail.com</a>
+        </div>
+
+        <div class="contact-box">
+            <strong style="color:#edbb00;">Email Presidente:</strong>
+            <a href="mailto:fbs-1985@hotmail.com">fbs-1985@hotmail.com</a>
+        </div>
+
+        <div class="contact-box">
+            <strong style="color:#22c55e;">WhatsApp / Info:</strong>
+            <a href="https://wa.me/393291186847" target="_blank">+39 329 118 6847</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Penya Barcelonista Manerbio BS. Visca el Barça!</p>
+    </footer>
+
+</body>
+</html>
