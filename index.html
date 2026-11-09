@@ -7,7 +7,6 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         
-        /* Full Page Background Image with Dark Overlay */
         body { 
             background: linear-gradient(rgba(11, 19, 41, 0.85), rgba(11, 19, 41, 0.92)), url('https://i.postimg.cc/7Z0mMBDG/1000441962.jpg'); 
             background-size: cover; 
@@ -33,14 +32,22 @@
         .hero h1 { font-size: 2.2rem; font-weight: 900; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
         .hero p { color: #e2e8f0; font-size: 0.95rem; margin-bottom: 20px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
         
-        /* Match Schedule Button Styles */
-        .match-schedule-container { text-align: center; padding: 15px 20px; margin-bottom: 10px; }
+        .match-schedule-container { text-align: center; padding: 15px 20px; margin-bottom: 5px; }
         .btn-schedule { background-color: #004d98; color: white; padding: 14px 28px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 1rem; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid #edbb00; }
 
-        .ticket-banner { background: rgba(237, 187, 0, 0.15); border-top: 1px solid rgba(237, 187, 0, 0.4); border-bottom: 1px solid rgba(237, 187, 0, 0.4); padding: 15px; text-align: center; }
-        .ticket-banner h3 { color: #edbb00; font-size: 0.95rem; font-weight: bold; margin-bottom: 4px; }
-        .ticket-banner p { color: #cbd5e1; font-size: 0.85rem; }
+        .ticket-banner { background: rgba(237, 187, 0, 0.15); border-top: 1px solid rgba(237, 187, 0, 0.4); border-bottom: 1px solid rgba(237, 187, 0, 0.4); padding: 20px; text-align: center; margin-bottom: 20px; }
+        .ticket-banner h3 { color: #edbb00; font-size: 1.1rem; font-weight: bold; margin-bottom: 8px; }
+        .ticket-banner p { color: #cbd5e1; font-size: 0.85rem; margin-bottom: 8px; }
+
+        .tickets-info-section { padding: 0 20px; margin-bottom: 25px; }
+        .ticket-info-card { background: rgba(30, 41, 59, 0.9); border-radius: 14px; padding: 20px; margin-bottom: 15px; border: 1px solid #334155; backdrop-filter: blur(5px); }
+        .ticket-info-card h4 { color: #edbb00; font-size: 1.05rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .ticket-info-card p, .ticket-info-card li { color: #cbd5e1; font-size: 0.85rem; margin-bottom: 8px; }
+        .ticket-info-card ul { padding-left: 20px; }
         
+        /* تنبيه 6 أشهر المبرز */
+        .alert-notice { background: rgba(220, 38, 38, 0.2); border-left: 4px solid #dc2626; padding: 10px; border-radius: 6px; margin-top: 10px; font-size: 0.85rem; color: #fca5a5; }
+
         .section { padding: 35px 20px; }
         .section-title { text-align: center; font-size: 1.6rem; font-weight: 800; margin-bottom: 25px; color: #edbb00; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
         
@@ -61,28 +68,10 @@
         .btn-blue { background: #2563eb; }
         .btn-red { background: #dc2626; }
 
-        /* Official Registration Notice Box */
-        .official-box { 
-            background: rgba(15, 23, 42, 0.95); 
-            border: 1px solid #edbb00; 
-            border-radius: 12px; 
-            padding: 20px; 
-            text-align: center; 
-            margin-top: 25px; 
-        }
+        .official-box { background: rgba(15, 23, 42, 0.95); border: 1px solid #edbb00; border-radius: 12px; padding: 20px; text-align: center; margin-top: 25px; }
         .official-box h4 { color: #edbb00; font-size: 1rem; margin-bottom: 8px; font-weight: bold; }
         .official-box p { color: #cbd5e1; font-size: 0.85rem; margin-bottom: 15px; }
-        .btn-official { 
-            display: inline-block; 
-            background: #004D98; 
-            color: #edbb00; 
-            padding: 10px 18px; 
-            border-radius: 8px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-size: 0.85rem; 
-            border: 1px solid #edbb00; 
-        }
+        .btn-official { display: inline-block; background: #004D98; color: #edbb00; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.85rem; border: 1px solid #edbb00; }
 
         .gallery-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 15px; max-width: 400px; margin: 0 auto; }
         .gallery-card { background: rgba(30, 41, 59, 0.9); border-radius: 12px; border: 1px solid #334155; overflow: hidden; text-align: center; backdrop-filter: blur(5px); }
@@ -118,7 +107,7 @@
         <p>Il punto di riferimento per tutti i tifosi del FC Barcelona a Manerbio e Brescia.</p>
     </section>
 
-    <!-- Match Schedule Button (Positioned above the ticket benefit banner) -->
+    <!-- Match Schedule Button -->
     <div class="match-schedule-container">
         <a href="https://www.fcbarcelona.com/en/football/first-team/schedule" target="_blank" class="btn-schedule">
             🔴🔵 Calendario Partite Barcellona
@@ -128,8 +117,28 @@
     <!-- Ticket Benefit Notice -->
     <div class="ticket-banner">
         <h3>🎫 Vantaggi Biglietti per Tutti i Soci</h3>
-        <p>Prenotazione biglietti per il <strong>Camp Nou</strong> e richiesta biglietti per le <strong>trasferte fuori casa a meno di 60€</strong>!</p>
+        <p>Prenotazione prioritaria per il <strong>Camp Nou</strong> e gestione biglietti per le <strong>trasferte fuori casa</strong>!</p>
     </div>
+
+    <!-- Detailed Ticket Information (Italian) -->
+    <section class="tickets-info-section">
+        <div class="ticket-info-card">
+            <h4>🏟️ Biglietti Camp Nou (Casa)</h4>
+            <p>Come soci della Penya, è possibile <strong>acquistare i biglietti in prevendita rispetto al pubblico generale</strong>, garantendo l'accesso ai posti migliori.</p>
+        </div>
+
+        <div class="ticket-info-card">
+            <h4>✈️ Biglietti Trasferte Fuori Casa (Away Matches)</h4>
+            <p>Per richiedere i biglietti per le partite fuori casa tramite il portale ufficiale:</p>
+            <ul>
+                <li>È possibile accedere al portale e selezionare autonomamente la partita desiderata (Listado partidos).</li>
+                <li>Il pagamento è obbligatorio una volta assegnati i biglietti.</li>
+            </ul>
+            <div class="alert-notice">
+                ⚠️ <strong>Requisito fondamentale:</strong> È necessario essere stati registrati correttamente come penyista da <strong>almeno 6 mesi</strong> alla data corrente per poter richiedere i biglietti delle trasferte.
+            </div>
+        </div>
+    </section>
 
     <!-- Tesseramento Section -->
     <section id="tesseramento" class="section">
@@ -143,8 +152,8 @@
             </div>
             <ul class="features">
                 <li>Tessera ufficiale Penya Barcelonista Manerbio</li>
-                <li><strong>Prenotazione biglietti Camp Nou</strong></li>
-                <li><strong>Biglietti trasferte fuori casa a meno di 60€</strong></li>
+                <li><strong>Prenotazione anticipata biglietti Camp Nou</strong></li>
+                <li><strong>Richiesta biglietti trasferte fuori casa</strong></li>
                 <li>Accesso alle attività ed eventi del club</li>
             </ul>
             <a href="https://wa.me/393291186847?text=Vorrei%20informazioni%20per%20il%20tesseramento%20Socio%20Base%20(20€)" target="_blank" class="btn-action btn-blue">Richiedi Adesione (€20)</a>
@@ -160,8 +169,8 @@
             <ul class="features">
                 <li>Tutti i vantaggi della Tessera Base</li>
                 <li><strong>Sciarpa Ufficiale della Penya inclusa</strong></li>
-                <li><strong>Prenotazione biglietti Camp Nou</strong></li>
-                <li><strong>Biglietti trasferte fuori casa a meno di 60€</strong></li>
+                <li><strong>Prenotazione anticipata biglietti Camp Nou</strong></li>
+                <li><strong>Richiesta biglietti trasferte fuori casa</strong></li>
             </ul>
             <a href="https://wa.me/393291186847?text=Vorrei%20informazioni%20per%20il%20tesseramento%20Socio%20Premium%20con%20Sciarpa%20(27€)" target="_blank" class="btn-action btn-red">Richiedi con Sciarpa (€27)</a>
         </div>
