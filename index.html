@@ -63,9 +63,13 @@
         .features li { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 10px; padding-left: 20px; position: relative; }
         .features li::before { content: "✓"; position: absolute; left: 0; color: #22c55e; font-weight: bold; }
         
-        .btn-action { display: block; width: 100%; padding: 12px; text-align: center; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 0.9rem; color: white; }
+        .btn-action { display: block; width: 100%; padding: 12px; text-align: center; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 0.9rem; color: white; margin-bottom: 10px; }
         .btn-blue { background: #2563eb; }
         .btn-red { background: #dc2626; }
+        .btn-paypal { background: #0070ba; }
+        
+        .iban-box { background: rgba(15, 23, 42, 0.8); border: 1px dashed #edbb00; border-radius: 8px; padding: 12px; margin-top: 15px; font-size: 0.8rem; color: #cbd5e1; text-align: center; word-break: break-all; }
+        .iban-box strong { color: #edbb00; display: block; margin-bottom: 4px; }
 
         .official-box { background: rgba(15, 23, 42, 0.95); border: 1px solid #edbb00; border-radius: 12px; padding: 20px; text-align: center; margin-top: 25px; }
         .official-box h4 { color: #edbb00; font-size: 1rem; margin-bottom: 8px; font-weight: bold; }
@@ -90,7 +94,6 @@
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#tesseramento">Tesseramento</a>
-            <a href="#pagamento">Pagamento</a>
             <a href="#galleria">Galleria</a>
             <a href="#contact">Contatti</a>
         </div>
@@ -156,7 +159,14 @@
                 <li><strong>Richiesta biglietti trasferte fuori casa</strong></li>
                 <li>Accesso alle attività ed eventi del club</li>
             </ul>
-            <a href="https://wa.me/393291186847?text=Vorrei%20informazioni%20per%20il%20tesseramento%20Socio%20Base%20(20€)" target="_blank" class="btn-action btn-blue">Richiedi Adesione (€20)</a>
+            <a href="https://wa.me/393291186847?text=Vorrei%20informazioni%20per%20il%20tesseramento%20Socio%20Base%20(20€)" target="_blank" class="btn-action btn-blue">Richiedi via WhatsApp (€20)</a>
+            <a href="https://www.paypal.me/AbdelfattahBoudraa/20" target="_blank" class="btn-action btn-paypal">💳 Paga con PayPal (€20)</a>
+            
+            <div class="iban-box">
+                <strong>🏦 Bonifico Bancario (IBAN):</strong>
+                IT39F3608105138292918692941<br>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Causale: Tesseramento Socio Base 2026</span>
+            </div>
         </div>
 
         <!-- Socio Premium + Sciarpa (€27) -->
@@ -172,7 +182,14 @@
                 <li><strong>Prenotazione anticipata biglietti Camp Nou</strong></li>
                 <li><strong>Richiesta biglietti trasferte fuori casa</strong></li>
             </ul>
-            <a href="https://wa.me/393291186847?text=Vorrei%20informazioni%20per%20il%20tesseramento%20Socio%20Premium%20con%20Sciarpa%20(27€)" target="_blank" class="btn-action btn-red">Richiedi con Sciarpa (€27)</a>
+            <a href="https://wa.me/393291186847?text=Vorrei%20informazioni%20per%20il%20tesseramento%20Socio%20Premium%20con%20Sciarpa%20(27€)" target="_blank" class="btn-action btn-red">Richiedi via WhatsApp (€27)</a>
+            <a href="https://www.paypal.me/AbdelfattahBoudraa/27" target="_blank" class="btn-action btn-paypal">💳 Paga con PayPal (€27)</a>
+            
+            <div class="iban-box">
+                <strong>🏦 Bonifico Bancario (IBAN):</strong>
+                IT39F3608105138292918692941<br>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Causale: Tesseramento Socio Premium 2026</span>
+            </div>
         </div>
 
         <!-- Official FC Barcelona Penyes Notice -->
@@ -180,36 +197,6 @@
             <h4>ℹ️ Registrazione Ufficiale FC Barcelona</h4>
             <p>La registrazione definitiva e la convalida di ogni socio avvengono tramite il portale ufficiale del FC Barcelona dedicato ai Penyistes.</p>
             <a href="https://myaccount.fcbarcelona.com/penyistes/en-US" target="_blank" class="btn-official">🌐 Portale Ufficiale FC Barcelona Penyistes</a>
-        </div>
-    </section>
-
-    <!-- Payment Section (Dati per il pagamento) -->
-    <section id="pagamento" class="section" style="padding-top: 0;">
-        <h2 class="section-title">Dati per il pagamento</h2>
-        
-        <div class="card" style="max-width: 500px; margin: 0 auto; text-align: left;">
-            <div style="background-color: rgba(15, 23, 42, 0.6); padding: 18px; border-radius: 8px; border-left: 4px solid #edbb00;">
-                
-                <!-- Beneficiario -->
-                <p style="margin: 0 0 14px 0; font-size: 0.95rem; color: #cbd5e1;">
-                    <strong style="color: #edbb00;">Beneficiario:</strong> Boudraa Abdelfattah
-                </p>
-
-                <!-- IBAN -->
-                <p style="margin: 0 0 6px 0; font-size: 0.95rem; color: #cbd5e1;">
-                    <strong style="color: #edbb00;">IBAN:</strong>
-                </p>
-                <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(30, 41, 59, 0.95); padding: 10px 12px; border: 1px solid #334155; border-radius: 6px; margin-bottom: 16px;">
-                    <code id="ibanCode" style="font-size: 0.85rem; font-weight: bold; color: #38bdf8; word-break: break-all;">IT39F3608105138292918692941</code>
-                    <button onclick="copyText('ibanCode')" style="background-color: #004d98; color: #fff; border: 1px solid #edbb00; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; font-weight: bold; margin-left: 8px; white-space: nowrap;">Copia</button>
-                </div>
-
-                <!-- Nota WhatsApp -->
-                <p style="margin: 0; font-size: 0.85rem; color: #cbd5e1; background-color: rgba(237, 187, 0, 0.15); padding: 12px; border-radius: 6px; border: 1px solid rgba(237, 187, 0, 0.4); line-height: 1.4;">
-                    💡 Per ricarica <strong>Postepay</strong>, contattaci su <a href="https://wa.me/393291186847" target="_blank" style="color: #4ade80; text-decoration: none; font-weight: bold;">WhatsApp</a>.
-                </p>
-
-            </div>
         </div>
     </section>
 
@@ -249,16 +236,6 @@
     <footer>
         <p>&copy; 2026 Penya Barcelonista Manerbio BS. Visca el Barça!</p>
     </footer>
-
-    <!-- JavaScript for Copying IBAN -->
-    <script>
-    function copyText(elementId) {
-      var text = document.getElementById(elementId).innerText;
-      navigator.clipboard.writeText(text).then(function() {
-        alert("IBAN copiato con successo!");
-      });
-    }
-    </script>
 
 </body>
 </html>
